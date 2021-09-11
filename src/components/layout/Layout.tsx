@@ -20,8 +20,10 @@ export default class Layout extends React.Component<IProps, IState> {
 				<Header />
 			</div>
 			<div className="content">
-				<Sidebar />
-				<div>{this.props.children}</div>
+				<div className="sidebarComponent">
+					<Sidebar />
+				</div>
+				<div className="childComponent">{this.props.children}</div>
 			</div>
 		</div>)
 	}
