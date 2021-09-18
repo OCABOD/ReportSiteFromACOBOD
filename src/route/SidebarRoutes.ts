@@ -1,8 +1,12 @@
-import { HOME } from "./Routes"
+import { EMPLOYEE, HOME } from "./Routes"
 
 export const Routes: ISidebarButton[] = [
 	{
 		buttonText: 'Home',
 		path: HOME
+	},
+	{
+		buttonText: "Employee",
+		path: EMPLOYEE
 	}
 ]
