@@ -18,9 +18,9 @@ export default class Sidebar extends React.Component<IProps, IState> {
 		return (
 			<div className="sidebar">
 				<div className="sidebar-content">
-				{Routes.map(item => (
-					<SidebarButton {...item} />
-				))}
+					{Routes.map(item => (
+						<SidebarButton {...item} />
+					))}
 				</div>
 			</div>
 		)
