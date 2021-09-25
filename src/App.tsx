@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter> 
       <div className="App">
         <Layout>
-          <div className="content">
+          <div className="content-content">
           <Switch>
             <Route exact path={HOME}>
               <Home/>
