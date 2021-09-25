@@ -17,6 +17,8 @@
     height: 50px;
     background-color: $secondaryColor;
     width: 90%;
+    margin: $main-spacing 0;
+    border-radius: $main-border-radius;
     display: flex;
     align-items: center;
     justify-content: center;
