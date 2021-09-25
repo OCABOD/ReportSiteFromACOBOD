@@ -17,7 +17,7 @@ export default class Employee extends React.Component<IProps, IState> {
 	render() {
 		return (
 			<div className ="employee-content">
-                {Array.from({length: 200}, (_, i) => i + 1).map(item =>(
+                {Array.from({length: 10}, (_, i) => i + 1).map(item =>(
                     <EmployeeCard></EmployeeCard>
                 ))}
 			</div>
