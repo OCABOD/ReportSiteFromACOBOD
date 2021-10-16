@@ -7,7 +7,6 @@ import BonusesSidebar from '../sidebar/BonusesSidebar';
 import './Bonus.scss';
 
 interface IProps {
-
 }
 
 interface IState {
