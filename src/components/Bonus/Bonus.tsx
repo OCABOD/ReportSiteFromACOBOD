@@ -10,7 +10,6 @@ interface IProps {
 }
 
 interface IState {
-
 }
 
 export default class Bonus extends React.Component<IProps, IState> {
