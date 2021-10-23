@@ -22,7 +22,7 @@ export default class Bonus extends React.Component<IProps, IState> {
             </Card>
             <Card class="childComponent">
             <Route path={FIRSTBONUS}>
-              First Bonus
+              First Bonus!
             </Route>
             </Card>
         </div>
