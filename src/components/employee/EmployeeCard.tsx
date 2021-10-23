@@ -15,11 +15,25 @@ export default class EmployeeCard extends React.Component<IProps, IState> {
 
 	render() {
 		return (
-			<div>
-                <Card>
-                    Name
-                </Card>
-			</div>
+			<Card>
+                <div className = "EmployeeCard">
+				<div>
+                     image
+					</div>
+					<div>
+                     Name and surname
+					</div>
+					<div>
+                     specialisation
+					</div>
+					<div>
+                     skype
+					</div>
+					<div>
+                     email
+					</div>
+                </div>
+			</Card>
 		)
 	}
 }
