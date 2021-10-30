@@ -1,10 +1,11 @@
 import React from 'react';
 import Home from './components/home/Home'
 import Employee from './components/employee/Employee'
+import Profile from './components/profile/Profile'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { EMPLOYEE, HOME } from './route/Routes';
+import { EMPLOYEE, HOME, PROFILE } from './route/Routes';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
             <Route path={EMPLOYEE}>
               <Employee />
             </Route>
+            <Route path={PROFILE} component={Profile}/>
           </Switch>
           </div>
         </Layout>
