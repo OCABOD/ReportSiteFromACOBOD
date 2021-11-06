@@ -11,14 +11,32 @@
     height: 100%;
     width: 100%;
 }
-.fixed_component{
-    flex-grow: 0;
-    
-}
+
 .max_component{
     flex-grow: 1;
     
 }
 .letters_column{
     width: 200px;
+}
+
+.fixed_component{
+    flex-grow: 0;
+    animation: Poyava 0.5s linear infinity; 
+    animation-delay: .2s; 
+}
+
+@keyframes Poyava {
+    // 0%, to {
+    //     opacity:.5;
+    // }
+    // 50% {
+    //   opacity:1;
+    // }
+    from {
+        left: 0;
+    }
+    to {
+        left: 300px;
+    }
 }

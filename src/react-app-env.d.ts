@@ -8,3 +8,10 @@ interface ISidebarButton {
 	buttonText: string;
 	path: string;
 }
+
+interface Iphrase {
+	quote: string;
+	author: string;
+}
+
+
