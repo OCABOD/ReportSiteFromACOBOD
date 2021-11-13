@@ -1,5 +1,6 @@
 import React from 'react';
 import Card  from '../card/Card';
+import profilephoto from '../../images/photo_2021-10-23_14-39-09.jpg'
 
 import './employee.scss';
 
@@ -18,7 +19,7 @@ export default class EmployeeCard extends React.Component<IProps, IState> {
 			<Card>
                 <div className = "EmployeeCard">
 				<div>
-                     image
+                     <img src={profilephoto}/>
 					</div>
 					<div>
                      Name and surname
