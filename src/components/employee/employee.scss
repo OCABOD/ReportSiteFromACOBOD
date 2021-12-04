@@ -1,12 +1,28 @@
 .employee-content{
+    overflow: auto;
+    height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .EmployeeCard{
-    height: 200px;
-    width: 100px;
+    height: 230px;
+    width: 200px;
+}
+
+.EmployeeCaedimage{
+    border-radius: 50px;
+}
+
+.EmployeeCArdlink{
+    font-size: 14px;
+    color: #ff9f1c;
+    
+}
+
+div{
+    margin-top: 5px;
 }

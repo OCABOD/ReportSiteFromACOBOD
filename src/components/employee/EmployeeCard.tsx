@@ -19,19 +19,19 @@ export default class EmployeeCard extends React.Component<IProps, IState> {
 			<Card>
                 <div className = "EmployeeCard">
 				<div>
-                     <img src={profilephoto}/>
+                     <img className='EmployeeCaedimage' src={profilephoto}/>
 					</div>
 					<div>
-                     Name and surname
+                     Vlad
 					</div>
 					<div>
-                     specialisation
+                     developer
 					</div>
 					<div>
-                     skype
+                     <a className='EmployeeCArdlink' href={`skype:${1}? call`}> Skype </a>
 					</div>
 					<div>
-                     email
+					<a className='EmployeeCArdlink' href={`mailto:${'test@gmail.com'}`}> Email </a>
 					</div>
                 </div>
 			</Card>
