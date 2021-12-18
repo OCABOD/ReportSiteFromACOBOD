@@ -46,6 +46,12 @@ app.post('/file', (req, res) => {
     console.log(req.body);
 });
 
+app.post('/register', (req, res) => {
+    console.log(req.body)
+    db.Users.Add(req.body.name, req.body.login, req.body.password, req.body.surname)
+    db.Users.Save()
+});
+
 
 
 
