@@ -53,6 +53,11 @@ app.post('/register', (req, res) => {
 });
 
 
+app.get('/Allusers', (request, result) => {
+    result.json(db.Users.Data)
+})
+
+
 
 
 app.listen(process.env.PORT || 8080);

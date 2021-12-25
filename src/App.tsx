@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Home from './components/home/Home'
 import Employee from './components/employee/Employee'
 import Profile from './components/profile/Profile'
@@ -8,6 +8,7 @@ import { Switch, Route } from 'react-router-dom'
 import { EMPLOYEE, HOME, PROFILE } from './route/Routes';
 
 import './App.css';
+import { AddTestUsers } from './axios/users';
 
 function App() {
 
