@@ -31,7 +31,7 @@ export default class EmployeeCard extends React.Component<IProps, IState> {
                      <a className='EmployeeCArdlink' href={`skype:${1}? call`}> Skype </a>
 					</div>
 					<div>
-					<a className='EmployeeCArdlink' href={`mailto:${'test@gmail.com'}`}> Email </a>
+					<a className='EmployeeCArdlink' href={`mailto:${'test@gmail.com'}`}>  Email </a>
 					</div>
                 </div>
 			</Card>

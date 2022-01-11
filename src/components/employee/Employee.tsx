@@ -29,7 +29,7 @@ export default class Employee extends React.Component<IProps, IState> {
 		return (
 			<div className ="employee-content">
                 {this.state.employee.map(item =>(
-                    <EmployeeCard></EmployeeCard>
+                    <EmployeeCard> </EmployeeCard>
                 ))}
 			</div>
 		)

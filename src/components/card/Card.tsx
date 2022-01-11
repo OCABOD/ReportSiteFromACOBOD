@@ -5,5 +5,5 @@ children:React.ReactNode;
 class?:string;
 }
 export default function Card(props:IProps){
-    return(<div className={'card '+props.class}>{props.children}</div>)
+    return (<div className={'card '+props.class}>{props.children}</div>)
 }
