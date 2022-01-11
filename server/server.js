@@ -54,6 +54,7 @@ app.post('/register', (req, res) => {
 
 
 app.get('/Allusers', (request, result) => {
+    console.log(db.Users.Data)
     result.json(db.Users.Data)
 })
 

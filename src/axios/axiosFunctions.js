@@ -1,10 +1,10 @@
 export function get(url) {
     return fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        mode: 'no-cors', // no-cors, *cors, same-origin
+        
         headers
     }).then(resp => {
-        console.log(resp)
+        
         return resp.json()});
 }
 
