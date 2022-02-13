@@ -6,15 +6,20 @@ interface IJSWindow {
 
 interface ISidebarButton {
 	buttonText: string;
-	path: string;
+	getPath: (...args) => string;
+}
+interface IBonusesButton {
+	buttonText: string;
+	getPath:()=> string;
 }
 
 interface IUserInfo {
 	name:string;
-	surName:string;
+	surname:string;
 	job:string;
 	age:number;
-	eMail:string;
+	email:string;
+	skype:string;
 	tags:ITag[];
 }
 
@@ -28,5 +33,9 @@ interface ILetter {
 		datesent: Date,
 		senderID: number,
 		recieverID: number,
-	
+}
+
+interface Iphrase {
+	quote: string;
+	author: string;
 }

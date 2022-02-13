@@ -4,6 +4,9 @@
     border-right: 1px solid black;
     height: 100%;
 }
+.Bonus_Sidebar{
+    width: 200px;
+}
 
 .sidebar-content {
     padding: 10px;
@@ -24,7 +27,7 @@
     justify-content: center;
 }
 
-a {
+.sidebar__link {
     text-decoration: none !important;
     color: white;
     text-align: center;

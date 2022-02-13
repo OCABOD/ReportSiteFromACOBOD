@@ -2,9 +2,10 @@
 
 export const userInfo: IUserInfo ={
 		name:'Bogdan',
-		surName:'Spas',
+		surname:'Spas',
 		job:'Programmer',
 		age:16,
-		eMail:'olegspasss@gmail.com',
+		email:'olegspasss@gmail.com',
+		skype:'oleg123',
 		tags:[]
 	}

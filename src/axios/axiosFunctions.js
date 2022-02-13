@@ -3,7 +3,7 @@ export function get(url) {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers
     }).then(resp => {
-        console.log(resp)
+        
         return resp.json()});
 }
 

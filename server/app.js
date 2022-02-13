@@ -1,17 +1,15 @@
-const { Users, Blogs, Messages, Letters, Bonus } = require('./db.js');
+const { Users, Blogs, Messages,Bonus } = require('./db.js');
 const { urlencoded } = require('body-parser');
 const { json } = require('body-parser');
 const cors = require('cors');
 const express = require('express');
 
 var db = {
-    Bonus: new Bonus(),
     Users: new Users(),
     Blogs: new Blogs(),
     Messages: new Messages(),
-    Letters: new Letters()
+    Bonus: new Bonus()
 };
-
 
 var app = express();
 
@@ -27,9 +25,6 @@ app.use(urlencoded({
     extended: true
 }));
 
-app.get('/getLettersByReciever/:id', function(request, result){
-    result.json(db.Letters.GetLettersToReciever(parseInt(request.params.id)))
-})
 
 app.get('/getUser/:id', function(req, res) {
     res.json(db.Users.Find(parseInt(req.params.id)));
@@ -48,21 +43,8 @@ app.get('/getBlog/:id', function(req, res) {
     });
 });
 
-app.post('/login', function(req,res){
-    res.json(db.Users.FindUserByLoginPassword(req.body.login, req.body.password))
-})
-
 app.post('/file', (req, res) => {
     console.log(req.body);
-});
-
-app.post('/register', (req, res) => {
-    console.log(req.body)
-    if(db.Users.isAvailableLogin(req.body.login)){
-        db.Users.Add(req.body.name, req.body.login, req.body.password, req.body.surname)
-        db.Users.Save()
-    }
-    res.json(db.Users.FindUserByLoginPassword(req.body.login, req.body.password))
 });
 app.get('/getBonus/:id', function(req, res) {
     let id = parseInt(req.params.id);
@@ -73,12 +55,9 @@ app.get('/getBonus/:id', function(req, res) {
     });
 });
 
-app.get('/Allusers', (request, result) => {
-    console.log(db.Users.Data)
-    result.json(db.Users.Data)
-})
 
 
-app.listen(process.env.PORT || 8081);
 
-console.log(8081)
+app.listen(process.env.PORT || 8080);
+
+console.log(8080)

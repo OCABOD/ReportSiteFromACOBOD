@@ -1,16 +1,33 @@
-import { EMAIL, EMPLOYEE, HOME } from "./Routes"
+import { getUser } from "../auth/auth"
+import { BONUSES,EMPLOYEE, HOME, PROFILE, ADMIN, EMAIL } from "./Routes"
 
 export const Routes: ISidebarButton[] = [
 	{
 		buttonText: 'Home',
-		path: HOME
+		getPath: () => HOME
 	},
 	{
 		buttonText: "Employee",
-		path: EMPLOYEE
+		getPath: () => EMPLOYEE
+	},
+	{
+		buttonText: "Bonuses",
+		getPath: ()=> BONUSES
 	},
 	{
 		buttonText: 'Email',
-		path: EMAIL
+		getPath: ()=> EMAIL
+	},
+	{
+		buttonText: "Profile",
+		getPath: (id?:number) => {
+			if(!id)
+				id=getUser().id
+			return `${PROFILE}/${id}`
+		}
+	},
+	{   
+		buttonText: "Admin",
+        getPath: () => ADMIN
 	}
 ]
