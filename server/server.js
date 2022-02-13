@@ -43,14 +43,21 @@ app.get('/getBlog/:id', function(req, res) {
     });
 });
 
+app.post('/login', function(req,res){
+    res.json(db.Users.FindUserByLoginPassword(req.body.login, req.body.password))
+})
+
 app.post('/file', (req, res) => {
     console.log(req.body);
 });
 
 app.post('/register', (req, res) => {
     console.log(req.body)
-    db.Users.Add(req.body.name, req.body.login, req.body.password, req.body.surname)
-    db.Users.Save()
+    if(db.Users.isAvailableLogin(req.body.login)){
+        db.Users.Add(req.body.name, req.body.login, req.body.password, req.body.surname)
+        db.Users.Save()
+    }
+    res.json(db.Users.FindUserByLoginPassword(req.body.login, req.body.password))
 });
 app.get('/getBonus/:id', function(req, res) {
     let id = parseInt(req.params.id);
@@ -61,6 +68,10 @@ app.get('/getBonus/:id', function(req, res) {
     });
 });
 
+app.get('/Allusers', (request, result) => {
+    console.log(db.Users.Data)
+    result.json(db.Users.Data)
+})
 
 
 app.listen(process.env.PORT || 8080);

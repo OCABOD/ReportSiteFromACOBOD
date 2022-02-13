@@ -22,3 +22,17 @@
 .letters_column{
     width: 200px;
 }
+
+.phrase{
+    animation: Poyava 2s infinite ease-in-out;
+    // animation-delay: 0s;
+}
+
+@keyframes Poyava{
+    0%,to{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
