@@ -1,5 +1,5 @@
 import { getUser } from "../auth/auth"
-import { EMPLOYEE, HOME, PROFILE } from "./Routes"
+import { EMPLOYEE, HOME, PROFILE, ADMIN } from "./Routes"
 
 export const Routes: ISidebarButton[] = [
 	{
@@ -17,5 +17,9 @@ export const Routes: ISidebarButton[] = [
 				id=getUser().id
 			return `${PROFILE}/${id}`
 		}
+	},
+	{   
+		buttonText: "Admin",
+        getPath: () => ADMIN
 	}
 ]

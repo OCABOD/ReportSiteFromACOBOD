@@ -5,12 +5,13 @@ import Profile from './components/profile/Profile'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { EMPLOYEE, HOME, PROFILE, REGISTER, LOGIN } from './route/Routes';
+import { EMPLOYEE, HOME, PROFILE, REGISTER, LOGIN, ADMIN } from './route/Routes';
 
 import './App.css';
 import Registration from './components/registration/Registration';
 import LoginPage from './components/loginPage/loginPage';
 import { isLoggedIn } from './auth/auth';
+import Admin from './components/Admin/Admin';
 
 
 
@@ -44,6 +45,9 @@ function App() {
               <Employee />
             </Route>
             <Route path={`${PROFILE}/:id`} component={Profile}/>
+            <Route path={ADMIN}>
+              <Admin/>
+            </Route>
           </Switch>
           </div>
         </Layout>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AllUsers } from '../../axios/users';
 
-
 import './employee.scss';
 import EmployeeCard from './EmployeeCard';
 
@@ -15,7 +14,7 @@ interface IState {
 }
 
 export default class Employee extends React.Component<IProps, IState> {
-	constructor(props:IProps ){
+    constructor(props:IProps ){
 		super(props)
 		this.state={
 			employee:[]
@@ -26,7 +25,6 @@ export default class Employee extends React.Component<IProps, IState> {
 			employee:await AllUsers()
 		})
 	}
-
 	render() {
 
 		const employee = this.state.employee;
@@ -48,4 +46,5 @@ export default class Employee extends React.Component<IProps, IState> {
 			</div>
 		)
 	}
+
 }

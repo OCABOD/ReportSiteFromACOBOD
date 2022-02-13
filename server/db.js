@@ -88,6 +88,7 @@ class Users extends DBData {
     }
 
     Add = (name, login, password, surname, age = null, avatar = null, job = null, registrationDate = null, skype = null, email = null) => {
+
         // if (typeof(name) === 'string' || typeof(surname) === 'string') {
         //     throw "Should be name and surname";
         // }

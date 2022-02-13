@@ -1,4 +1,5 @@
-import {get, post} from './axiosFunctions';
+import {post} from './axiosFunctions';
+import {get}  from './axiosFunctions';
 
 export function Register(newUser){
     return post('http://localhost:8080/register', newUser)
