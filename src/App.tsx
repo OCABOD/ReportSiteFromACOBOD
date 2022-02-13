@@ -5,10 +5,11 @@ import Profile from './components/profile/Profile'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { EMPLOYEE, HOME, PROFILE } from './route/Routes';
+import { EMPLOYEE, HOME, PROFILE, ADMIN } from './route/Routes';
 
 import './App.css';
 import { AddTestUsers } from './axios/users';
+import Admin from './components/Admin/Admin';
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
               <Employee />
             </Route>
             <Route path={PROFILE} component={Profile}/>
+            <Route path={ADMIN}>
+              <Admin/>
+            </Route>
           </Switch>
           </div>
         </Layout>
