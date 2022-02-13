@@ -11,7 +11,6 @@ import './App.css';
 import Registration from './components/registration/Registration';
 import LoginPage from './components/loginPage/loginPage';
 import { isLoggedIn } from './auth/auth';
-import { AddTestUsers } from './axios/users';
 import Admin from './components/Admin/Admin';
 
 
