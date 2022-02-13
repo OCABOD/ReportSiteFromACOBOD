@@ -21,3 +21,12 @@ interface IUserInfo {
 interface ITag{
 	tagName:string;
 }
+
+interface ILetter {
+		topic: string,
+		content: string,
+		datesent: Date,
+		senderID: number,
+		recieverID: number,
+	
+}

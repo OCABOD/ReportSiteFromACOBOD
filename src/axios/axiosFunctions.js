@@ -1,7 +1,6 @@
 export function get(url) {
     return fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        mode: 'no-cors', // no-cors, *cors, same-origin
         headers
     }).then(resp => {
         console.log(resp)
@@ -21,5 +20,4 @@ export const headers = {
     'Access-Control-Allow-Headers': 'X-PINGOTHER, Content-Type',
     'Access-Control-Allow-Origin': "*",
     "Content-Type": "application/json",
-    mode: 'no-cors'
 };

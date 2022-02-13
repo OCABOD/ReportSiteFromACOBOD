@@ -3,9 +3,10 @@ import Card from '../card/Card'
 interface IProps {
     nameAndSurname:string;
     topic:string;
+    isselected?:boolean;
 }
 export default function MiniLetter(props:IProps){
     return(
-        <Card class='Letter'><div>{props.nameAndSurname}</div><div>{props.topic}</div></Card>    
+        <Card class={`Letter ${props.isselected?"selected":""}`}><div>{props.nameAndSurname}</div><div>{props.topic}</div></Card>    
     )
 }

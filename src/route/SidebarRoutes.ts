@@ -1,4 +1,4 @@
-import { EMPLOYEE, HOME, PROFILE } from "./Routes"
+import { EMAIL, EMPLOYEE, HOME } from "./Routes"
 
 export const Routes: ISidebarButton[] = [
 	{
@@ -10,7 +10,7 @@ export const Routes: ISidebarButton[] = [
 		path: EMPLOYEE
 	},
 	{
-		buttonText: "Profile",
-		path: PROFILE
+		buttonText: 'Email',
+		path: EMAIL
 	}
 ]

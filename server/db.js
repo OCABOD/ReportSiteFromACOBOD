@@ -104,9 +104,33 @@ class Users extends DBData {
     }
 }
 
+class Letters extends DBData {
+    constructor() {
+        super("letters")
+    }
+
+    Add = (topic, content, datesent, senderID, recieverID) => {
+        // if (typeof(name) === 'string' || typeof(surname) === 'string') {
+        //     throw "Should be name and surname";
+        // }
+
+        super.Add({
+            topic,
+            content,
+            datesent,
+            senderID,
+            recieverID,
+        })
+    }
+    GetLettersToReciever = (userId) => {
+        return this.Data.filter(letter => letter.recieverID === userId)
+    }
+}
+
 module.exports.Read = Read;
 module.exports.Write = Write;
 
 module.exports.Users = Users;
 module.exports.Blogs = Blogs;
 module.exports.Messages = Messages;
+module.exports.Letters= Letters;
