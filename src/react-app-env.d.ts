@@ -10,7 +10,7 @@ interface ISidebarButton {
 }
 interface IBonusesButton {
 	buttonText: string;
-	path: string;
+	getPath:()=> string;
 }
 
 interface IUserInfo {
