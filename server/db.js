@@ -87,7 +87,7 @@ class Users extends DBData {
         super("users")
     }
 
-    Add = (name, login, password, surname, age = null, avatar = null, registrationDate = null) => {
+    Add = (name, login, password, surname, age = null, avatar = null, job = null, registrationDate = null, skype = null, email = null) => {
         // if (typeof(name) === 'string' || typeof(surname) === 'string') {
         //     throw "Should be name and surname";
         // }
@@ -99,8 +99,18 @@ class Users extends DBData {
             password,
             age,
             avatar,
-            registrationDate
+            registrationDate,
+            skype,
+            email,
+            job
         })
+    }
+
+    isAvailableLogin = (login) => {
+        return this.Data.findIndex(item => item.login === login) === -1;
+    }
+    FindUserByLoginPassword = (login, password) => {
+        return this.Data[this.Data.findIndex(item => item.login === login && item.password === password)];
     }
 }
 

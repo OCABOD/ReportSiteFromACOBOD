@@ -35,3 +35,17 @@
   width: 100%;
   height: 100%;
 }
+
+/* .Registration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.Registration{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './components/home/Home'
 import Employee from './components/employee/Employee'
 import Profile from './components/profile/Profile'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { EMPLOYEE, HOME, PROFILE } from './route/Routes';
+import { EMPLOYEE, HOME, PROFILE, REGISTER, LOGIN } from './route/Routes';
 
 import './App.css';
+import Registration from './components/registration/Registration';
+import LoginPage from './components/loginPage/loginPage';
+import { isLoggedIn } from './auth/auth';
+
+
 
 function App() {
+  const [isLogged, setLogged] = useState<Boolean>(isLoggedIn())  
 
   return (
     <BrowserRouter> 
-      <div className="App">
+      <div className="App" > { 
+      !isLogged?( // isLogged
+        <div className="Registration">
+          <Switch>
+            <Route exact path={LOGIN}>
+              <LoginPage setLogged={setLogged}/>
+            </Route>
+            <Route path={REGISTER}>
+              <Registration setLogged={setLogged}/>
+            </Route>
+          </Switch>
+         
+        </div>
+        )
+      :(
         <Layout>
           <div className="content-content">
           <Switch>
@@ -23,10 +43,13 @@ function App() {
             <Route path={EMPLOYEE}>
               <Employee />
             </Route>
-            <Route path={PROFILE} component={Profile}/>
+            <Route path={`${PROFILE}/:id`} component={Profile}/>
           </Switch>
           </div>
         </Layout>
+        )
+      }
+
       </div>
     </BrowserRouter>
   )
