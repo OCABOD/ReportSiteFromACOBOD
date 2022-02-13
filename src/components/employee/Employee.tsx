@@ -26,11 +26,23 @@ export default class Employee extends React.Component<IProps, IState> {
 		})
 	}
 	render() {
+
+		const employee = this.state.employee;
+		console.log(employee)
 		return (
 			<div className ="employee-content">
-                {this.state.employee.map(item =>(
-                    <EmployeeCard> </EmployeeCard>
-                ))}
+                {
+				employee.map((item, index) => (
+                     <EmployeeCard
+					 	name={item.name}
+						surname={item.surname}
+						skype={item.skype}
+						job={item.job}
+						email={item.email}
+						id={index}
+					 />
+                ))
+				}
 			</div>
 		)
 	}

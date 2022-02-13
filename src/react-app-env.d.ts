@@ -6,18 +6,25 @@ interface IJSWindow {
 
 interface ISidebarButton {
 	buttonText: string;
-	path: string;
+	getPath: (...args) => string;
 }
 
 interface IUserInfo {
 	name:string;
-	surName:string;
+	surname:string;
 	job:string;
 	age:number;
-	eMail:string;
+	email:string;
+	skype:string;
 	tags:ITag[];
 }
 
 interface ITag{
 	tagName:string;
+}
+
+
+interface Iphrase {
+	quote: string;
+	author: string;
 }

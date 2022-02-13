@@ -13,16 +13,31 @@
     width: 200px;
 }
 
-.EmployeeCaedimage{
+.EmployeeCardImage{
     border-radius: 50px;
+    height: 100px;
 }
 
-.EmployeeCArdlink{
+.EmployeeCardLink{
     font-size: 14px;
     color: #ff9f1c;
-    
+    text-decoration: none;
+    font-weight: 800;
+
 }
 
 div{
     margin-top: 5px;
+} 
+
+.card__item p{
+    margin: 0;
+    font-size: 22;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.CardLink{
+    text-decoration: none;
+    color: #000;
 }
