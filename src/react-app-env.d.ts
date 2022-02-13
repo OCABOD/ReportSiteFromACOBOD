@@ -8,6 +8,10 @@ interface ISidebarButton {
 	buttonText: string;
 	getPath: (...args) => string;
 }
+interface IBonusesButton {
+	buttonText: string;
+	getPath:()=> string;
+}
 
 interface IUserInfo {
 	name:string;

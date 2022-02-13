@@ -86,6 +86,7 @@ class Users extends DBData {
     constructor() {
         super("users")
     }
+    
 
     Add = (name, login, password, surname, age = null, avatar = null, job = null, registrationDate = null, skype = null, email = null) => {
 
@@ -114,10 +115,22 @@ class Users extends DBData {
         return this.Data[this.Data.findIndex(item => item.login === login && item.password === password)];
     }
 }
+class Bonus extends DBData {
+    constructor() {
+        super("bonus")
+    }
+    Add = (userId,salaryGrowth)=> {
+        super.Add({
+            userId,
+            salaryGrowth
+        })
+    }
+}
+
 
 module.exports.Read = Read;
 module.exports.Write = Write;
-
+module.exports.Bonus = Bonus;
 module.exports.Users = Users;
 module.exports.Blogs = Blogs;
 module.exports.Messages = Messages;

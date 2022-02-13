@@ -1,7 +1,7 @@
 import React from 'react'
 import './card.scss'
 interface IProps {
-children:React.ReactNode;
+children?:React.ReactNode;
 class?:string;
 }
 export default function Card(props:IProps){

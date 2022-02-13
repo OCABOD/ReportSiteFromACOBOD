@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Home from './components/home/Home'
 import Employee from './components/employee/Employee'
-import Profile from './components/profile/Profile'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { EMPLOYEE, HOME, PROFILE, REGISTER, LOGIN, ADMIN } from './route/Routes';
 
 import './App.css';
+import Bonus from './components/Bonus/Bonus';
+import Profile from './components/profile/Profile'
+import { EMPLOYEE, HOME, PROFILE, REGISTER, LOGIN, ADMIN, BONUSES} from './route/Routes';
+
 import Registration from './components/registration/Registration';
 import LoginPage from './components/loginPage/loginPage';
 import { isLoggedIn } from './auth/auth';
@@ -43,6 +45,9 @@ function App() {
             </Route>
             <Route path={EMPLOYEE}>
               <Employee />
+            </Route>
+            <Route path={BONUSES}>
+              <Bonus />
             </Route>
             <Route path={`${PROFILE}/:id`} component={Profile}/>
             <Route path={ADMIN}>

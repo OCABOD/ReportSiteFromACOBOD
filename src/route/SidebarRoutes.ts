@@ -1,5 +1,5 @@
 import { getUser } from "../auth/auth"
-import { EMPLOYEE, HOME, PROFILE, ADMIN } from "./Routes"
+import { BONUSES,EMPLOYEE, HOME, PROFILE, ADMIN } from "./Routes"
 
 export const Routes: ISidebarButton[] = [
 	{
@@ -9,6 +9,10 @@ export const Routes: ISidebarButton[] = [
 	{
 		buttonText: "Employee",
 		getPath: () => EMPLOYEE
+	},
+	{
+		buttonText: "Bonuses",
+		getPath: ()=> BONUSES
 	},
 	{
 		buttonText: "Profile",
