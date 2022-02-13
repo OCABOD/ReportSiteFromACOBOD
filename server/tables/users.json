@@ -1,1 +1,1 @@
-[{ "id": 0, "name": "Petro" }, { "id": 1, "name": "Ivan" }]
+[{"id":0,"name":"Petro"},{"id":1,"name":"Ivan"},{"id":2,"name":"Nick","surname":"Name","login":"NickName","password":"123123","age":null,"avatar":null,"registrationDate":null}]

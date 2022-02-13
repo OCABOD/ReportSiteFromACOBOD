@@ -4,10 +4,12 @@ import Employee from './components/employee/Employee'
 import Layout from './components/layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom'
-import { BONUSES, EMPLOYEE, HOME } from './route/Routes';
+import { BONUSES, EMPLOYEE, HOME,PROFILE } from './route/Routes';
 
 import './App.css';
 import Bonus from './components/Bonus/Bonus';
+import Profile from './components/profile/Profile'
+
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
             <Route path={BONUSES}>
               <Bonus />
             </Route>
+            <Route path={PROFILE} component={Profile}/>
           </Switch>
           </div>
         </Layout>

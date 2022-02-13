@@ -1,14 +1,14 @@
-const { Users, Blogs, Messages,Bonus } = require('./db.js');
+const { Users, Blogs, Messages, Bonus } = require('./db.js');
 const { urlencoded } = require('body-parser');
 const { json } = require('body-parser');
 const cors = require('cors');
 const express = require('express');
 
 var db = {
+    Bonus: new Bonus(),
     Users: new Users(),
     Blogs: new Blogs(),
-    Messages: new Messages(),
-    Bonus: new Bonus()
+    Messages: new Messages()
 };
 
 var app = express();
@@ -46,6 +46,12 @@ app.get('/getBlog/:id', function(req, res) {
 app.post('/file', (req, res) => {
     console.log(req.body);
 });
+
+app.post('/register', (req, res) => {
+    console.log(req.body)
+    db.Users.Add(req.body.name, req.body.login, req.body.password, req.body.surname)
+    db.Users.Save()
+});
 app.get('/getBonus/:id', function(req, res) {
     let id = parseInt(req.params.id);
     let bonus = db.Bonus.Find(id);
@@ -54,7 +60,6 @@ app.get('/getBonus/:id', function(req, res) {
         bonus,
     });
 });
-
 
 
 
